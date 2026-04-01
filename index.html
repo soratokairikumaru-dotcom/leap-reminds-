@@ -196,7 +196,23 @@ getWeakSections().slice(0,3).forEach(sec => {
 
   weakDiv.appendChild(btn);
 });
+const allDiv = document.createElement("div");
+allDiv.innerHTML = "<h2>📚 セクション一覧</h2>";
 
+for (let i = 0; i < 12; i++) {
+  let btn = document.createElement("button");
+
+  let start = i * 200 + 1;
+  let end = Math.min(start + 199, total);
+
+  btn.textContent = `セクション${i+1}`;
+
+  btn.onclick = () => showSection(i);
+
+  allDiv.appendChild(btn);
+}
+
+document.body.insertBefore(allDiv, container);
 // 初期表示
 showSection(currentSection);
 updateProgress();
