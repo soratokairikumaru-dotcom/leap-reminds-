@@ -1,0 +1,8 @@
+{
+  "name": "英単語管理",
+  "short_name": "単語",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000"
+}
